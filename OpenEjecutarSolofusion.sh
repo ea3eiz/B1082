@@ -40,14 +40,14 @@ echo "                          ABRIENDO SOLO FUSION                            
 echo " **************************************************************************"
 sleep 2
 cd /home/pi/YSFClients/YSFGateway
-sudo lxterminal --geometry=88x12 -e ./YSFGateway YSFGateway.ini & 
+sudo xterm -geometry 90x8+1171+364 -bg black -fg white -fa 'Verdana' -fs 9x -T YSFGateway -e ./YSFGateway YSFGateway.ini & 
 cd /home/pi/MMDVMHost
 #/home/pi/B108/./qt_info_solofusion & sudo ./MMDVMFUSION MMDVMFUSION.ini
 sudo ./MMDVMFUSION MMDVMFUSION.ini
 cd /home/pi/Desktop
 sudo cp Abrir_solofusion.desktop /home/pi
 
-sed -i "6c Exec=sh -c 'cd /home/pi/B108/;xterm -geometry 90x8+1171+364 -bg black -fg white -fa 'Verdana' -fs 9x -T SOLOFUSION -e sudo sh OpenEjecutarSolofusion.sh'" /home/pi/Abrir_solofusion.desktop
+sed -i "6c Exec=sh -c 'cd /home/pi/B108/;xterm -geometry 88x17+648+664 -bg black -fg white -fa 'Verdana' -fs 9x -T SOLOFUSION -e sudo sh OpenEjecutarSolofusion.sh'" /home/pi/Abrir_solofusion.desktop
 sed -i "7c Icon=/home/pi/$SCRIPTS_version/SOLO_YSF.png" /home/pi/Abrir_solofusion.desktop
 sed -i "11c Name[es_ES]=Abrir solo FUSION" /home/pi/Abrir_solofusion.desktop
 sed -i "12c SOLOFUSION=OFF" /home/pi/status.ini
