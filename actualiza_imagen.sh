@@ -16,8 +16,10 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 
-                        rm -R /home/pi/B108
+                        sudo rm -R /home/pi/B108
                         git clone http://github.com/ea3eiz/B1082
                         sleep 2
                         mv B1082 B108
-                        /home/pi/B108/./qt_imagen_actualizada
+                        sudo chmod 777 -R /home/pi/B108
+                        cd /home/pi/B108
+                        ./qt_imagen_actualizada
