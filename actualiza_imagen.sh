@@ -10,4 +10,4 @@
                         cd /home/pi/B108
                         ./qt_imagen_actualizada
                         sleep 1
-                        rm -R B1082
+                        sudo rm -R B1082
