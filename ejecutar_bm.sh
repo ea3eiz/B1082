@@ -1,6 +1,5 @@
 #!/bin/bash
 
-SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/MMDVMHost
 echo "\33[38;5;138m"
 echo " **************************************************************************"
