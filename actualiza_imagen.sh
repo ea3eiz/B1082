@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+#Actualiza imagen
                         cd /home/pi
                         git clone http://github.com/ea3eiz/B1082
                         sleep 1
