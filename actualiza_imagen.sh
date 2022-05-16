@@ -4,6 +4,7 @@
                         
                         cd /home/pi
                         sudo rm -R B108
+                        sudo rm -R B1082
                         git clone http://github.com/ea3eiz/B1082
                         sleep 1
                         mv B1082 B108
