@@ -34,10 +34,14 @@ sudo apt install python3-twisted
 echo "${BLANCO}"
 sudo apt install python3-bitarray
 sudo apt install python3-dev
-git clone https://github.com/lz5pn/HBlink3
+sudo git clone https://github.com/lz5pn/HBlink3
 sudo mv /opt/HBlink3/ /opt/backup/
 sudo mv /opt/backup/HBlink3/ /opt/
 sudo mv /opt/backup/HBmonitor/ /opt/
+
+sudo chmod 777 -R /opt/HBmonitor
+sudo chmod 777 -R /opt/HBlink3
+
 sudo mv /opt/backup/dmr_utils3/ /opt/
 sudo rm -r /opt/backup/
 
@@ -67,7 +71,7 @@ sudo chmod +x playback.py
 #Crear directorio  /var/log/hblink si no está creado
 sudo mkdir /var/log/hblink
 
-#Crear servicio para el parrot /lib/systemd/system/parrot.service 
+#Crear servicio para el parrot /lib/systemd/system/parrot.service  
 sudo cp /home/pi/B108/parrot.service /lib/systemd/system/
 
 sudo systemctl enable parrot.service
