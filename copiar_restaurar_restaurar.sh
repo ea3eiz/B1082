@@ -45,11 +45,16 @@ cp -f regla8 /home/pi/.local/
 cp -f regla9 /home/pi/.local/
 cp -f reglaxlx /home/pi/.local/
 
+sudo cp Analog_Bridge.ini /opt/Analog_Bridge
 
-#sudo cp -f sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
-
-
-
+sudo cp -f MMDVM_Bridge.ini /opt/MMDVM_Bridge
+sudo cp -f MMDVM_Bridge_ESPECIAL.ini /opt/MMDVM_Bridge
+sudo cp -f MMDVM_Bridge_BM.ini /opt/MMDVM_Bridge
+sudo cp -f MMDVM_Bridge_DSTAR.ini /opt/MMDVM_Bridge
+sudo cp -f MMDVM_Bridge_FCS.ini /opt/MMDVM_Bridge
+sudo cp -f MMDVM_Bridge_FREEDMR.ini /opt/MMDVM_Bridge
+sudo cp -f MMDVM_Bridge_PLUS.ini /opt/MMDVM_Bridge
+sudo cp -f MMDVM_Bridge_TGIF.ini /opt/MMDVM_Bridge
 
 sudo cp -f hblink.cfg /opt/HBlink3/
 sudo cp -f rules.py /opt/HBlink3/
