@@ -81,6 +81,12 @@ sudo cp -f info.ini /home/pi/
 
 cp -f bluetooth.sh /home/pi/.local
 
+#RESTAURAR LOS SERVICIOS
+sudo systemctl restart analog_bridge.service
+sudo systemctl restart md380-emu.service
+sudo systemctl restart mmdvm_bridge.service
+sudo systemctl restart nxdngateway.service
+sudo systemctl restart ircddbgatewayd.service
 
 
 
