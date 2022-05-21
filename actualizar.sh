@@ -1,17 +1,17 @@
 ﻿#!/bin/bash
 # Coloca bien los iconos en el escritorio
-sudo cp /home/pi/icons.screen0-1904x1023.rc /home/pi/.config/xfce4/desktop
-sleep 2
-xfdesktop --reload
+#sudo cp /home/pi/icons.screen0-1904x1023.rc /home/pi/.config/xfce4/desktop
+#sleep 2
+#xfdesktop --reload
 
 
 
-ambe3003=$(awk "NR==24" /home/pi/status.ini)
-if [ "$ambe3003" = 'AMBE3003=OFF' ];then
-sudo systemctl stop AMBEServer3003 
-else
-sudo systemctl start AMBEServer3003 
-fi
+#ambe3003=$(awk "NR==24" /home/pi/status.ini)
+#if [ "$ambe3003" = 'AMBE3003=OFF' ];then
+#sudo systemctl stop AMBEServer3003 
+#else
+#sudo systemctl start AMBEServer3003 
+#fi
 
 
 
@@ -25,25 +25,25 @@ version="B108-"
 version=$version$actualizacion
 
 #pone todos los status de inicio en OFF
-sed -i "1c D-STAR=OFF" $usuario/status.ini
-sed -i "2c BlueDV=OFF" $usuario/status.ini
-sed -i "3c YSF=OFF" $usuario/status.ini
-sed -i "4c DV4mini=OFF" $usuario/status.ini
-sed -i "5c MMDVM=OFF" $usuario/status.ini
-sed -i "6c MMDVMPLUS=OFF" $usuario/status.ini
-sed -i "7c MMDVMBM=OFF" $usuario/status.ini#
-sed -i "8c SVXLINK=OFF" $usuario/status.ini
-sed -i "9c dstarrepeater=OFF" $usuario/status.ini
-sed -i "10c MMDVMLIBRE=OFF" $usuario/status.ini
-sed -i "11c AMBE_SERVER=OFF" $usuario/status.ini
-sed -i "12c SOLOFUSION=OFF" $usuario/status.ini
-sed -i "13c SOLODSTAR=OFF" $usuario/status.ini
-sed -i "14c YSF2DMR=OFF" $usuario/status.ini
-sed -i "15c DMR2YSF=OFF" $usuario/status.ini
-sed -i "16c DMR2NXDN=OFF" $usuario/status.ini
-sed -i "17c NXDN=OFF" $usuario/status.ini
-#sed -i "18c DVSWITCH=OFF" $usuario/status.ini
-sed -i "19c DMRGateway=OFF" $usuario/status.ini
+#sed -i "1c D-STAR=OFF" $usuario/status.ini
+#sed -i "2c BlueDV=OFF" $usuario/status.ini
+#sed -i "3c YSF=OFF" $usuario/status.ini
+#sed -i "4c DV4mini=OFF" $usuario/status.ini
+#sed -i "5c MMDVM=OFF" $usuario/status.ini
+#sed -i "6c MMDVMPLUS=OFF" $usuario/status.ini
+#sed -i "7c MMDVMBM=OFF" $usuario/status.ini#
+#sed -i "8c SVXLINK=OFF" $usuario/status.ini
+#sed -i "9c dstarrepeater=OFF" $usuario/status.ini
+#sed -i "10c MMDVMLIBRE=OFF" $usuario/status.ini
+#sed -i "11c AMBE_SERVER=OFF" $usuario/status.ini
+#sed -i "12c SOLOFUSION=OFF" $usuario/status.ini
+#sed -i "13c SOLODSTAR=OFF" $usuario/status.ini
+#sed -i "14c YSF2DMR=OFF" $usuario/status.ini
+#sed -i "15c DMR2YSF=OFF" $usuario/status.ini
+#sed -i "16c DMR2NXDN=OFF" $usuario/status.ini
+#sed -i "17c NXDN=OFF" $usuario/status.ini
+##sed -i "18c DVSWITCH=OFF" $usuario/status.ini
+#sed -i "19c DMRGateway=OFF" $usuario/status.ini
 #sed -i "22c NEXTIONDRIVER=OFF" $usuario/status.ini
 #Actualiza Imagen
 cd $usuario/$SCRIPTS_version
@@ -51,15 +51,15 @@ git pull
 sleep 2
 
 #Actualiza todos los iconos y Quita todos los iconos verdes que se quedan al cerrar la imagen
-sudo cp $usuario/Desktop/Activar_dvswitch.desktop $usuario/.local #deja el icono en el estado que se reinició
-sudo cp $usuario/Desktop/Activar_NextionDriver.desktop $usuario/.local/Activar_NextionDriver.desktop_1 #deja el icono en el estado que se reinició
-
-cd $usuario/$SCRIPTS_version/Desktop
-cp * $usuario/Desktop
-sudo chmod 777 -R $usuario/Desktop
-
-sudo cp $usuario/.local/Activar_dvswitch.desktop $usuario/Desktop #deja el icono en el estado que se reinició
-sudo cp $usuario/.local/Activar_NextionDriver.desktop_1 $usuario/Desktop/Activar_NextionDriver.desktop #deja el icono en el estado que se reinició
+#sudo cp $usuario/Desktop/Activar_dvswitch.desktop $usuario/.local #deja el icono en el estado que se reinició
+#sudo cp $usuario/Desktop/Activar_NextionDriver.desktop $usuario/.local/Activar_NextionDriver.desktop_1 #deja el icono en el estado que se reinició
+#
+#cd $usuario/$SCRIPTS_version/Desktop
+#cp * $usuario/Desktop
+#sudo chmod 777 -R $usuario/Desktop
+#
+#sudo cp $usuario/.local/Activar_dvswitch.desktop $usuario/Desktop #deja el icono en el estado que se reinició
+#sudo cp $usuario/.local/Activar_NextionDriver.desktop_1 $usuario/Desktop/Activar_NextionDriver.desktop #deja el icono en el estado que se reinició
 
 
 #pone todos los datos de DMR+ , Brandameiter, svxlink etc en panel_control.ini
@@ -178,106 +178,106 @@ fusion=`sed -n '2p'  $usuario/MMDVMHost/MMDVMFUSION.ini`
 frbm=`sed -n '13p'  $usuario/MMDVMHost/MMDVMBM.ini`
 frplus=`sed -n '13p'  $usuario/MMDVMHost/MMDVMPLUS.ini`
 sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS=$plus'&'masterBM=$masterbm'&'masterPLUS=$masterplus'&'radio=$masterradio'&'version=$version'&'ESPECIAL=$masterespecial'&'YSFGateway=$masterYSFGateway                      
-frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
-cd $usuario/Desktop/
-cp RXF_BM.desktop $usuario/
-sed -i "12c Name=$frecuencia" $usuario/RXF_BM.desktop
-cd $usuario
-cp RXF_BM.desktop $usuario/Desktop
-rm $usuario/RXF_BM.desktop
-
-frecuencia=$(awk "NR==2" $usuario/INFO_RXF)
-cd $usuario/Desktop/
-cp RXF_DMRPLUS.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_DMRPLUS.desktop
-cd $usuario
-cp RXF_DMRPLUS.desktop $usuario/Desktop
-rm $usuario/RXF_DMRPLUS.desktop
-
-frecuencia=$(awk "NR==3" $usuario/INFO_RXF)
-cd $usuario/Desktop/
-cp RXF_ESPECIAL.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_ESPECIAL.desktop
-cd $usuario
-cp RXF_ESPECIAL.desktop $usuario/Desktop
-rm $usuario/RXF_ESPECIAL.desktop
-
-frecuencia=$(awk "NR==4" $usuario/INFO_RXF)
-cd $usuario/Desktop/
-cp RXF_RADIO.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_RADIO.desktop
-cd $usuario
-cp RXF_RADIO.desktop $usuario/Desktop
-rm $usuario/RXF_RADIO.desktop
-
-frecuencia=$(awk "NR==6" $usuario/INFO_RXF)
-cd $usuario/Desktop/
-cp RXF_SOLOFUSION.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_SOLOFUSION.desktop
-cd $usuario
-cp RXF_SOLOFUSION.desktop $usuario/Desktop
-rm $usuario/RXF_SOLOFUSION.desktop
-
-frecuencia=$(awk "NR==5" $usuario/INFO_RXF)
-cd $usuario/Desktop/
-cp RXF_DSTAR.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_DSTAR.desktop
-cd $usuario
-cp RXF_DSTAR.desktop $usuario/Desktop
-rm $usuario/RXF_DSTAR.desktop
-
-frecuencia=$(awk "NR==6" $usuario/INFO_RXF)
-cd $usuario/Desktop/
-cp RXF_C4FM.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_C4FM.desktop
-cd $usuario
-cp RXF_C4FM.desktop $usuario/Desktop
-rm $usuario/RXF_C4FM.desktop
-
-frecuencia=$(awk "NR==13" $usuario/INFO_RXF)
-cd $usuario/Desktop/
-cp RXF_YSF2DMR.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_YSF2DMR.desktop
-cd $usuario
-cp RXF_YSF2DMR.desktop $usuario/Desktop
-rm $usuario/RXF_YSF2DMR.desktop
-
-frecuencia=$(awk "NR==14" $usuario/INFO_RXF)
-cd $usuario/Desktop/
-cp RXF_DMR2YSF.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_DMR2YSF.desktop
-cd $usuario
-cp RXF_DMR2YSF.desktop $usuario/Desktop
-rm $usuario/RXF_DMR2YSF.desktop
-
-frecuencia=$(awk "NR==15" $usuario/INFO_RXF)
-cd $usuario/Desktop/
-cp RXF_DMR2NXDN.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_DMR2NXDN.desktop
-cd $usuario
-cp RXF_DMR2NXDN.desktop $usuario/Desktop
-rm $usuario/RXF_DMR2NXDN.desktop
-
-frecuencia=$(awk "NR==17" $usuario/INFO_RXF)
-cd $usuario/Desktop/
-cp RXF_NXDN.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_NXDN.desktop
-cd $usuario
-cp RXF_NXDN.desktop $usuario/Desktop
-rm $usuario/RXF_NXDN.desktop
-
-
-frecuencia=$(awk "NR==18" $usuario/INFO_RXF)
-cd $usuario/Desktop/
-cp RXF_DMRGATEWAY.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_DMRGATEWAY.desktop
-cd $usuario
-cp RXF_DMRGATEWAY.desktop $usuario/Desktop
-rm $usuario/RXF_DMRGATEWAY.desktop
+#frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
+#cd $usuario/Desktop/
+#cp RXF_BM.desktop $usuario/
+#sed -i "12c Name=$frecuencia" $usuario/RXF_BM.desktop
+#cd $usuario
+#cp RXF_BM.desktop $usuario/Desktop
+#rm $usuario/RXF_BM.desktop
+#
+#frecuencia=$(awk "NR==2" $usuario/INFO_RXF)
+#cd $usuario/Desktop/
+#cp RXF_DMRPLUS.desktop $usuario/
+#sed -i "11c Name=$frecuencia" $usuario/RXF_DMRPLUS.desktop
+#cd $usuario
+#cp RXF_DMRPLUS.desktop $usuario/Desktop
+#rm $usuario/RXF_DMRPLUS.desktop
+#
+#frecuencia=$(awk "NR==3" $usuario/INFO_RXF)
+#cd $usuario/Desktop/
+#cp RXF_ESPECIAL.desktop $usuario/
+#sed -i "11c Name=$frecuencia" $usuario/RXF_ESPECIAL.desktop
+#cd $usuario
+#cp RXF_ESPECIAL.desktop $usuario/Desktop
+#rm $usuario/RXF_ESPECIAL.desktop
+#
+#frecuencia=$(awk "NR==4" $usuario/INFO_RXF)
+#cd $usuario/Desktop/
+#cp RXF_RADIO.desktop $usuario/
+#sed -i "11c Name=$frecuencia" $usuario/RXF_RADIO.desktop
+#cd $usuario
+#cp RXF_RADIO.desktop $usuario/Desktop
+#rm $usuario/RXF_RADIO.desktop
+#
+#frecuencia=$(awk "NR==6" $usuario/INFO_RXF)
+#cd $usuario/Desktop/
+#cp RXF_SOLOFUSION.desktop $usuario/
+#sed -i "11c Name=$frecuencia" $usuario/RXF_SOLOFUSION.desktop
+#cd $usuario
+#cp RXF_SOLOFUSION.desktop $usuario/Desktop
+#rm $usuario/RXF_SOLOFUSION.desktop
+#
+#frecuencia=$(awk "NR==5" $usuario/INFO_RXF)
+#cd $usuario/Desktop/
+#cp RXF_DSTAR.desktop $usuario/
+#sed -i "11c Name=$frecuencia" $usuario/RXF_DSTAR.desktop
+#cd $usuario
+#cp RXF_DSTAR.desktop $usuario/Desktop
+#rm $usuario/RXF_DSTAR.desktop
+#
+#frecuencia=$(awk "NR==6" $usuario/INFO_RXF)
+#cd $usuario/Desktop/
+#cp RXF_C4FM.desktop $usuario/
+#sed -i "11c Name=$frecuencia" $usuario/RXF_C4FM.desktop
+#cd $usuario
+#cp RXF_C4FM.desktop $usuario/Desktop
+#rm $usuario/RXF_C4FM.desktop
+#
+#frecuencia=$(awk "NR==13" $usuario/INFO_RXF)
+#cd $usuario/Desktop/
+#cp RXF_YSF2DMR.desktop $usuario/
+#sed -i "11c Name=$frecuencia" $usuario/RXF_YSF2DMR.desktop
+#cd $usuario
+#cp RXF_YSF2DMR.desktop $usuario/Desktop
+#rm $usuario/RXF_YSF2DMR.desktop
+#
+#frecuencia=$(awk "NR==14" $usuario/INFO_RXF)
+#cd $usuario/Desktop/
+#cp RXF_DMR2YSF.desktop $usuario/
+#sed -i "11c Name=$frecuencia" $usuario/RXF_DMR2YSF.desktop
+#cd $usuario
+#cp RXF_DMR2YSF.desktop $usuario/Desktop
+#rm $usuario/RXF_DMR2YSF.desktop
+#
+#frecuencia=$(awk "NR==15" $usuario/INFO_RXF)
+#cd $usuario/Desktop/
+#cp RXF_DMR2NXDN.desktop $usuario/
+#sed -i "11c Name=$frecuencia" $usuario/RXF_DMR2NXDN.desktop
+#cd $usuario
+#cp RXF_DMR2NXDN.desktop $usuario/Desktop
+#rm $usuario/RXF_DMR2NXDN.desktop
+#
+#frecuencia=$(awk "NR==17" $usuario/INFO_RXF)
+#cd $usuario/Desktop/
+#cp RXF_NXDN.desktop $usuario/
+#sed -i "11c Name=$frecuencia" $usuario/RXF_NXDN.desktop
+#cd $usuario
+#cp RXF_NXDN.desktop $usuario/Desktop
+#rm $usuario/RXF_NXDN.desktop
+#
+#
+#frecuencia=$(awk "NR==18" $usuario/INFO_RXF)
+#cd $usuario/Desktop/
+#cp RXF_DMRGATEWAY.desktop $usuario/
+#sed -i "11c Name=$frecuencia" $usuario/RXF_DMRGATEWAY.desktop
+#cd $usuario
+#cp RXF_DMRGATEWAY.desktop $usuario/Desktop
+#rm $usuario/RXF_DMRGATEWAY.desktop
 
 # Dar permisos al Escritorio
-sudo chmod 777 -R $usuario/Desktop
-sleep 2
+#sudo chmod 777 -R $usuario/Desktop
+#sleep 2
 
 sudo rm -R /home/pi/B108/associacioader.com
 sudo rm -R /home/pi/B108/Desktop/associacioader.com
