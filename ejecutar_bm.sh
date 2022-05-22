@@ -9,4 +9,5 @@ sleep 2
 #/home/pi/B108/./qt_info_bm & sudo ./MMDVMBM MMDVMBM.ini
 sudo ./MMDVMBM MMDVMBM.ini
 
+sudo sed -i "7c MMDVMBM=ON" /home/pi/status.ini
 
