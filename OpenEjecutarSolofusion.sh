@@ -1,5 +1,6 @@
 #!/bin/bash
 
+exec("sudo sed -i '12c SOLOFUSION=OFF' /home/pi/status.ini");
 echo "\33[38;5;138m"
 echo " **************************************************************************"
 echo "                          ABRIENDO SOLO FUSION                             "

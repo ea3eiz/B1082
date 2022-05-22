@@ -1,5 +1,6 @@
 #!/bin/bash
 
+exec("sudo sed -i '5c MMDVM=OFF' /home/pi/status.ini");
 cd /home/pi/MMDVMHost
 echo "\33[1;36m"
 echo " **************************************************************************"
