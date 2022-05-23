@@ -6,7 +6,7 @@ echo " *************************************************************************
 echo "                          ABRIENDO BRANDMEISTER                             "
 echo " **************************************************************************"
 sleep 2
-#/home/pi/B108/./qt_info_bm & sudo ./MMDVMBM MMDVMBM.ini
+#/home/pi/B108/./qt_info_bm & sudo ./MMDVMBM MMDVMBM.ini 
 sudo ./MMDVMBM MMDVMBM.ini
 
 
