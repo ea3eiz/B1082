@@ -276,8 +276,8 @@ sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS
 #rm $usuario/RXF_DMRGATEWAY.desktop
 
 # Dar permisos al Escritorio
-#sudo chmod 777 -R $usuario/Desktop
-#sleep 2
+sudo chmod 777 -R $usuario/Desktop
+sleep 2
 
 sudo rm -R /home/pi/B108/associacioader.com
 sudo rm -R /home/pi/B108/Desktop/associacioader.com
