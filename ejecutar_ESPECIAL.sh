@@ -1,6 +1,6 @@
 #!/bin/bash
 
-exec("sudo sed -i '10c MMDVMESPECIAL=ON' /home/pi/status.ini");
+sudo sed -i '10c MMDVMESPECIAL=ON' /home/pi/status.ini
 cd /home/pi/MMDVMHost
 echo "\033[1;33m"
 echo " **************************************************************************"

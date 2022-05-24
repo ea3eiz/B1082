@@ -1,6 +1,6 @@
 #!/bin/bash
 
-exec("sudo sed -i '6c MMDVMPLUS=ON' /home/pi/status.ini");
+sudo sed -i '6c MMDVMPLUS=ON' /home/pi/status.ini
 cd /home/pi/MMDVMHost
 echo "\33[1;37m"
 echo " **************************************************************************"
