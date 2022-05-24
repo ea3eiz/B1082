@@ -83,10 +83,10 @@ frec=$(awk "NR==13" $usuario/MMDVMHost/MMDVMBM.ini)
 #linea_master=$largo$letra
 masterbm=$(awk "NR==232" $usuario/MMDVMHost/MMDVMBM.ini)
 masterbm=`expr substr $masterbm 15 30`
-sed -i "1c $indi" $usuario/info_panel_control.ini
-sed -i "2c $ide" $usuario/info_panel_control.ini
-sed -i "3c $frec" $usuario/info_panel_control.ini
-sed -i "4c $masterbm" $usuario/info_panel_control.ini
+#sed -i "1c $indi" $usuario/info_panel_control.ini
+#sed -i "2c $ide" $usuario/info_panel_control.ini
+#sed -i "3c $frec" $usuario/info_panel_control.ini
+#sed -i "4c $masterbm" $usuario/info_panel_control.ini
 #PLUS
 indi=$(awk "NR==2" $usuario/MMDVMHost/MMDVMPLUS.ini)
 ide=$(awk "NR==3" $usuario/MMDVMHost/MMDVMPLUS.ini)
@@ -101,10 +101,10 @@ frec=$(awk "NR==13" $usuario/MMDVMHost/MMDVMPLUS.ini)
 #linea_master=$largo$letra
 masterplus=$(awk "NR==232" $usuario/MMDVMHost/MMDVMPLUS.ini)
 masterplus=`expr substr $masterplus 15 30`
-sed -i "11c $indi" $usuario/info_panel_control.ini
-sed -i "12c $ide" $usuario/info_panel_control.ini
-sed -i "13c $frec" $usuario/info_panel_control.ini
-sed -i "14c $masterplus" $usuario/info_panel_control.ini
+#sed -i "11c $indi" $usuario/info_panel_control.ini
+#sed -i "12c $ide" $usuario/info_panel_control.ini
+#sed -i "13c $frec" $usuario/info_panel_control.ini
+#sed -i "14c $masterplus" $usuario/info_panel_control.ini
 #Radio
 indi=$(awk "NR==2" $usuario/MMDVMHost/MMDVM.ini)
 ide=$(awk "NR==3" $usuario/MMDVMHost/MMDVM.ini)
@@ -119,10 +119,10 @@ frec=$(awk "NR==13" $usuario/MMDVMHost/MMDVM.ini)
 #linea_master=$largo$letra
 masterradio=$(awk "NR==232" $usuario/MMDVMHost/MMDVM.ini)
 masterradio=`expr substr $masterradio 15 30`
-sed -i "6c $indi" $usuario/info_panel_control.ini
-sed -i "7c $ide" $usuario/info_panel_control.ini
-sed -i "8c $frec" $usuario/info_panel_control.ini
-sed -i "9c $masterradio" $usuario/info_panel_control.ini
+#sed -i "6c $indi" $usuario/info_panel_control.ini
+#sed -i "7c $ide" $usuario/info_panel_control.ini
+#sed -i "8c $frec" $usuario/info_panel_control.ini
+#sed -i "9c $masterradio" $usuario/info_panel_control.ini
 #YSF
 master=$(awk "NR==39" $usuario/YSFClients/YSFGateway/YSFGateway.ini)
 sed -i "21c $master" $usuario/info_panel_control.ini
