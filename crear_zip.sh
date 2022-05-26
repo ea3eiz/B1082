@@ -24,6 +24,12 @@ sudo rm /home/pi/.local/COPIA_SEGURIDAD/Downloads/*.*
             cp -f MMDVMESPECIAL.ini_copia2 /home/pi/.local/COPIA_SEGURIDAD/Downloads
             cp -f MMDVMESPECIAL.ini_copia3 /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
+            #solo Dstar
+            cp -f MMDVMDSTAR.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMDSTAR.ini_copia /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMDSTAR.ini_copia2 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMDSTAR.ini_copia3 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+
             cp -f MMDVMFUSION.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
            
             cd /home/pi/.local

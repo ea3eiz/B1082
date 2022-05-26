@@ -24,7 +24,10 @@
             cp -f MMDVMESPECIAL.ini_copia2 /home/pi/MMDVMHost
             cp -f MMDVMESPECIAL.ini_copia3 /home/pi/MMDVMHost
 
+            #solo Dstar y solo Fusion
+            cp -f MMDVMDSTAR.ini /home/pi/MMDVMHost
             cp -f MMDVMFUSION.ini /home/pi/MMDVMHost
+            #fin  Dstar y solo Fusion
 
             cp -f memoria_dmrplus /home/pi/.local
             cp -f memoria_bm /home/pi/.local
