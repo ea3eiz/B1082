@@ -29,6 +29,9 @@
             cp -f MMDVMFUSION.ini /home/pi/MMDVMHost
             #fin  Dstar y solo Fusion
 
+            cp -f MMDVMDMRGateway.ini /home/pi/MMDVMHost/
+            cp -f DMRGateway.ini /home/pi/DMRGateway/
+
             cp -f memoria_dmrplus /home/pi/.local
             cp -f memoria_bm /home/pi/.local
             cp -f memoria_radio /home/pi/.local

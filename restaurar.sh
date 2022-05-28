@@ -46,11 +46,15 @@ echo "***************************************************"
 
             cp -f MMDVMFUSION.ini /home/pi/MMDVMHost
 
+            cp -f MMDVMDMRGateway.ini /home/pi/MMDVMHost/
+            cp -f DMRGateway.ini /home/pi/DMRGateway/
+
             cp -f memoria_dmrplus /home/pi/.local
             cp -f memoria_bm /home/pi/.local
             cp -f memoria_radio /home/pi/.local
             cp -f memoria_especial /home/pi/.local
             cp -f memoria_solofusion /home/pi/.local
+            cp -f memoria_solodstar /home/pi/.local
 
             cp -f YSFGateway.ini /home/pi/YSFClients/YSFGateway/
             cp -f YSFGateway.ini_1 /home/pi/YSFClients/YSFGateway/
