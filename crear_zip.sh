@@ -38,10 +38,14 @@ sudo rm /home/pi/.local/COPIA_SEGURIDAD/Downloads/*.*
             cp -f memoria_radio /home/pi/.local/COPIA_SEGURIDAD/Downloads
             cp -f memoria_especial /home/pi/.local/COPIA_SEGURIDAD/Downloads
             cp -f memoria_solofusion /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f memoria_solodstar /home/pi/.local/COPIA_SEGURIDAD/Downloads
           
             cd  /home/pi/YSFClients/YSFGateway/
             cp -f YSFGateway.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
             cp -f YSFGateway.ini_1 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+
+            cp -f /home/pi/MMDVMHost/MMDVMDMRGateway.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f /home/pi/DMRGateway/DMRGateway.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
 cp -f /home/pi/.local/regla2 /home/pi/.local/COPIA_SEGURIDAD/Downloads
 cp -f /home/pi/.local/regla3 /home/pi/.local/COPIA_SEGURIDAD/Downloads
