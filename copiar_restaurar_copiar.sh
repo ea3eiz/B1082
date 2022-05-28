@@ -40,6 +40,9 @@ clear
             cp -f YSFGateway.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
             cp -f YSFGateway.ini_1 /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
+            cp -f /home/pi/MMDVMHost/MMDVMDMRGateway.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f /home/pi/DMRGateway/DMRGateway.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+
 cp -f /home/pi/.local/regla2 /home/pi/.local/COPIA_SEGURIDAD/Downloads
 cp -f /home/pi/.local/regla3 /home/pi/.local/COPIA_SEGURIDAD/Downloads
 cp -f /home/pi/.local/regla4 /home/pi/.local/COPIA_SEGURIDAD/Downloads
