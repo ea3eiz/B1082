@@ -14,4 +14,5 @@ sleep 1
 sudo rm /home/pi/Abrir_dv4mini.desktop
 
 cd /home/pi/Dv4mini
-mono dv4mini.exe
+sudo mono dv4mini.exe
+
