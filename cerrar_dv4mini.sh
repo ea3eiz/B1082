@@ -1,6 +1,7 @@
 #!/bin/bash
-sudo su | ps aux | grep dv4mini.exe | grep -v grep | awk '{print $2}' | xargs kill
-sudo killall dv_serial
+#sudo su | ps aux | grep dv4mini.exe | grep -v grep | awk '{print $2}' | xargs kill
+#sudo killall dv_serial
+sudo killall -9 mono
 sudo killall python
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
