@@ -2,6 +2,7 @@
 #sudo su | ps aux | grep dv4mini.exe | grep -v grep | awk '{print $2}' | xargs kill
 #sudo killall dv_serial
 sudo killall -9 mono
+sudo killall -9 dv_serial
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_dv4mini.desktop /home/pi
