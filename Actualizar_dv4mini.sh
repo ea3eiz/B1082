@@ -2,6 +2,7 @@
 clear
 while true
 do
+SB108=$(awk "NR==1" /home/pi/.config/autostart/version)
 #Colores
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
@@ -93,6 +94,19 @@ clear
                         echo "************************************"
                         sleep 3                        
                         clear
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+esac
+done;;
+3) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+sh reinstalar_hblink.sh
                         break;;
                         [nN]* ) echo ""
                         break;;
