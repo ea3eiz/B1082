@@ -18,7 +18,7 @@ sleep 2
 # Cierra dstar en DVSwitch Server
 sudo systemctl stop ircddbgatewayd
 # Ejecuta Solo D-STAR
-sudo sed -i '13c SOLODSTAR=ON' /home/pi/status.ini
+#sudo sed -i '13c SOLODSTAR=ON' /home/pi/status.ini
 cd /home/pi/MMDVMHost
 sudo ircddbgateway -gui & sudo ./MMDVMDSTAR MMDVMDSTAR.ini
 sudo sed -i '13c SOLODSTAR=ON' /home/pi/status.ini
