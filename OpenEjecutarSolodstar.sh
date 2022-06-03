@@ -15,12 +15,12 @@ echo "                          ABRIENDO SOLO DSTAR                             
 echo " **************************************************************************"
 sleep 2
 
-# Cierra dstar en DVSwitch Server
+# Cierra dstar en DVSwitch Server 
 sudo systemctl stop ircddbgatewayd
 
 # Ejecuta Solo D-STAR
 cd /home/pi/MMDVMHost
 sudo ircddbgateway -gui & sudo ./MMDVMDSTAR MMDVMDSTAR.ini
-
+sudo sed -i '13c SOLODSTAR=ON' /home/pi/status.ini
 
 
