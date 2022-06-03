@@ -19,7 +19,7 @@ sleep 2
 sudo systemctl stop ircddbgatewayd
 # Ejecuta Solo D-STAR
 cd /home/pi/MMDVMHost
-sudo ircddbgateway -gui & sudo ./MMDVMDSTAR MMDVMDSTAR.ini &
+sudo ircddbgateway -gui & sudo ./MMDVMDSTAR MMDVMDSTAR.ini
 sudo sed -i '13c SOLODSTAR=ON' /home/pi/status.ini
 
 
