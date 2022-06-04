@@ -141,7 +141,7 @@ header {
     } 
 }
 .ambe{
-    height: 480px;
+    height: 530px;
     color:#FFFFFF;
     font-size: 26px;
     padding-top: 5px;
@@ -296,6 +296,14 @@ h6{
 <form method="post" action="restart_services.php"/>
     <button class="btn btn-warning btn-sm btn-block" type="submit">APLICAR LOS CAMBIOS E INICIAR SISTEMAS</button>
 </form>
+
+<br>
+
+<form method="post" action="/dvs/index_dvswitch_buster.php"/>
+    <button class="btn btn-success btn-sm btn-block" type="submit">VOLVER AL MENÚ</button>
+</form>
+
+
 
 <!--============== CAJA LOGIN ====================================-->      
    
