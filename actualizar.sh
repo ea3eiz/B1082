@@ -15,7 +15,7 @@
 
 
 
-# path usuario
+# path usuario 
 usuario="/home/pi"
 usuario="$usuario"
 SCRIPTS_version="B108"
