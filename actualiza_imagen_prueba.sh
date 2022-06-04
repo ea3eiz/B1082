@@ -42,5 +42,5 @@ sudo cp AMBE_DESACTIVADO.png /var/www/html/images/
 
 sudo chmod 777 -R /var/www/html/
 
-/qt_imagen_actualizada
+./qt_imagen_actualizada
 
