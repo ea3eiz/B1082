@@ -47,7 +47,7 @@ cd /opt/MMDVM_CM/DMR2YSF/
 xterm -geometry 88x11+648+420 -bg black -fg white -fa 'Verdana' -fs 9x -T DMR2YSF -e ./DMR2YSF DMR2YSF.ini &
 sleep 2
 
-cd /home/pi/YSFClients/YSFGateway
+cd /opt/YSFGateway
 xterm -geometry 88x12+648+136 -bg black -fg white -fa 'Verdana' -fs 9x -T YSFGATEWAY -e sudo ./YSFGateway YSFGateway.ini &
 
 
